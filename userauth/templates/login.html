@@ -1,0 +1,35 @@
+<div class="inner-banner-w3ls py-5" id="home1">
+
+    <div class="container py-xl-5 py-lg-3">
+        <!-- login  -->
+        <div class="modal-body mt-md-2 mt-5">
+            <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Login here</h3>
+            <form action="#" method="POST" >
+                {% csrf_token %}
+
+                
+
+                <div class="form-group">
+                    <label class="col-form-label">username</label>
+                    <input type="text" class="form-control" placeholder="your username" name="username" >
+                </div>
+
+                <div class="form-group">
+                    <label class="col-form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="*****" name="pass" >
+                </div>
+
+               
+
+
+                <input type="submit" class="btn button-style-w3" value="Login">
+
+                {% for message in messages %}
+                <p id="messages">{{message}}</p>
+                {% endfor %}
+
+                <label class="col-form-label"><a href="#">Forgot Password ?</a></label>
+
+            </form>
+        </div>
+
